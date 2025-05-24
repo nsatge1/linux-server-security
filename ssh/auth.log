@@ -1,0 +1,735 @@
+2025-05-23T20:06:07.474731+00:00 server useradd[778]: new group: name=nsatge, GID=1000
+2025-05-23T20:06:07.474733+00:00 server useradd[778]: new user: name=nsatge, UID=1000, GID=1000, home=/home/nsatge, shell=/bin/bash, from=none
+2025-05-23T20:06:07.474734+00:00 server useradd[778]: add 'nsatge' to group 'adm'
+2025-05-23T20:06:07.474736+00:00 server useradd[778]: add 'nsatge' to group 'cdrom'
+2025-05-23T20:06:07.474737+00:00 server useradd[778]: add 'nsatge' to group 'sudo'
+2025-05-23T20:06:07.474738+00:00 server useradd[778]: add 'nsatge' to group 'dip'
+2025-05-23T20:06:07.474739+00:00 server useradd[778]: add 'nsatge' to group 'plugdev'
+2025-05-23T20:06:07.474741+00:00 server useradd[778]: add 'nsatge' to group 'lxd'
+2025-05-23T20:06:07.474742+00:00 server useradd[778]: add 'nsatge' to shadow group 'adm'
+2025-05-23T20:06:07.474744+00:00 server useradd[778]: add 'nsatge' to shadow group 'cdrom'
+2025-05-23T20:06:07.474746+00:00 server useradd[778]: add 'nsatge' to shadow group 'sudo'
+2025-05-23T20:06:07.474747+00:00 server useradd[778]: add 'nsatge' to shadow group 'dip'
+2025-05-23T20:06:07.474748+00:00 server useradd[778]: add 'nsatge' to shadow group 'plugdev'
+2025-05-23T20:06:07.474749+00:00 server useradd[778]: add 'nsatge' to shadow group 'lxd'
+2025-05-23T20:06:07.474751+00:00 server passwd[786]: password for 'nsatge' changed by 'root'
+2025-05-23T20:06:07.475290+00:00 server systemd-logind[819]: New seat seat0.
+2025-05-23T20:06:07.475291+00:00 server systemd-logind[819]: Watching system buttons on /dev/input/event0 (Power Button)
+2025-05-23T20:06:07.475292+00:00 server systemd-logind[819]: Watching system buttons on /dev/input/event3 (QEMU QEMU USB Keyboard)
+2025-05-23T20:06:07.475353+00:00 server polkitd[810]: Loading rules from directory /etc/polkit-1/rules.d
+2025-05-23T20:06:07.475355+00:00 server polkitd[810]: Loading rules from directory /usr/share/polkit-1/rules.d
+2025-05-23T20:06:07.475356+00:00 server polkitd[810]: Finished loading, compiling and executing 6 rules
+2025-05-23T20:06:07.475360+00:00 server polkitd[810]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2025-05-23T20:06:21.717615+00:00 server login[962]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
+2025-05-23T20:06:21.718191+00:00 server login[962]: PAM adding faulty module: pam_lastlog.so
+2025-05-23T20:06:25.004549+00:00 server login[962]: pam_unix(login:session): session opened for user nsatge(uid=1000) by nsatge(uid=0)
+2025-05-23T20:06:25.029930+00:00 server systemd-logind[819]: New session 1 of user nsatge.
+2025-05-23T20:06:25.042143+00:00 server (systemd): pam_unix(systemd-user:session): session opened for user nsatge(uid=1000) by nsatge(uid=0)
+2025-05-23T20:07:28.798179+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/adduser admin
+2025-05-23T20:07:28.800916+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:07:28.883432+00:00 server groupadd[1254]: group added to /etc/group: name=admin, GID=1001
+2025-05-23T20:07:28.885498+00:00 server groupadd[1254]: group added to /etc/gshadow: name=admin
+2025-05-23T20:07:28.886491+00:00 server groupadd[1254]: new group: name=admin, GID=1001
+2025-05-23T20:07:28.900248+00:00 server useradd[1261]: new user: name=admin, UID=1001, GID=1001, home=/home/admin, shell=/bin/bash, from=/dev/pts/0
+2025-05-23T20:07:34.155747+00:00 server passwd[1274]: pam_unix(passwd:chauthtok): password changed for admin
+2025-05-23T20:07:35.522944+00:00 server chfn[1275]: changed user 'admin' information
+2025-05-23T20:07:35.661916+00:00 server gpasswd[1283]: members of group users set by root to admin
+2025-05-23T20:07:35.667856+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:07:56.977663+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/usermod -aG sudo admin
+2025-05-23T20:07:56.978693+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:07:57.008749+00:00 server usermod[1291]: add 'admin' to group 'sudo'
+2025-05-23T20:07:57.009247+00:00 server usermod[1291]: add 'admin' to shadow group 'sudo'
+2025-05-23T20:07:57.014816+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:08:03.952911+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/apt update
+2025-05-23T20:08:03.954446+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:08:10.839140+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:08:18.120267+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/apt upgrade -y
+2025-05-23T20:08:18.121952+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:08:40.803549+00:00 server polkitd[810]: Reloading rules
+2025-05-23T20:08:40.809147+00:00 server polkitd[810]: Collecting garbage unconditionally...
+2025-05-23T20:08:40.809660+00:00 server polkitd[810]: Loading rules from directory /etc/polkit-1/rules.d
+2025-05-23T20:08:40.809870+00:00 server polkitd[810]: Loading rules from directory /usr/share/polkit-1/rules.d
+2025-05-23T20:08:40.812486+00:00 server polkitd[810]: Finished loading, compiling and executing 6 rules
+2025-05-23T20:08:40.812564+00:00 server polkitd[810]: Reloading rules
+2025-05-23T20:08:40.812599+00:00 server polkitd[810]: Collecting garbage unconditionally...
+2025-05-23T20:08:40.812704+00:00 server polkitd[810]: Loading rules from directory /etc/polkit-1/rules.d
+2025-05-23T20:08:40.812741+00:00 server polkitd[810]: Loading rules from directory /usr/share/polkit-1/rules.d
+2025-05-23T20:08:40.813170+00:00 server polkitd[810]: Finished loading, compiling and executing 6 rules
+2025-05-23T20:08:56.012219+00:00 server polkitd[810]: Reloading rules
+2025-05-23T20:08:56.013649+00:00 server polkitd[810]: Collecting garbage unconditionally...
+2025-05-23T20:08:56.013687+00:00 server polkitd[810]: Loading rules from directory /etc/polkit-1/rules.d
+2025-05-23T20:08:56.014567+00:00 server polkitd[810]: Loading rules from directory /usr/share/polkit-1/rules.d
+2025-05-23T20:08:56.018700+00:00 server polkitd[810]: Finished loading, compiling and executing 6 rules
+2025-05-23T20:08:56.018930+00:00 server polkitd[810]: Reloading rules
+2025-05-23T20:08:56.019005+00:00 server polkitd[810]: Collecting garbage unconditionally...
+2025-05-23T20:08:56.023871+00:00 server polkitd[810]: Loading rules from directory /etc/polkit-1/rules.d
+2025-05-23T20:08:56.023934+00:00 server polkitd[810]: Loading rules from directory /usr/share/polkit-1/rules.d
+2025-05-23T20:08:56.024630+00:00 server polkitd[810]: Finished loading, compiling and executing 6 rules
+2025-05-23T20:08:57.454219+00:00 server polkitd[810]: Reloading rules
+2025-05-23T20:08:57.454296+00:00 server polkitd[810]: Collecting garbage unconditionally...
+2025-05-23T20:08:57.454560+00:00 server polkitd[810]: Loading rules from directory /etc/polkit-1/rules.d
+2025-05-23T20:08:57.454597+00:00 server polkitd[810]: Loading rules from directory /usr/share/polkit-1/rules.d
+2025-05-23T20:08:57.456455+00:00 server polkitd[810]: Finished loading, compiling and executing 6 rules
+2025-05-23T20:08:57.456505+00:00 server polkitd[810]: Reloading rules
+2025-05-23T20:08:57.456532+00:00 server polkitd[810]: Collecting garbage unconditionally...
+2025-05-23T20:08:57.456895+00:00 server polkitd[810]: Loading rules from directory /etc/polkit-1/rules.d
+2025-05-23T20:08:57.456925+00:00 server polkitd[810]: Loading rules from directory /usr/share/polkit-1/rules.d
+2025-05-23T20:08:57.457650+00:00 server polkitd[810]: Finished loading, compiling and executing 6 rules
+2025-05-23T20:09:58.076370+00:00 server polkitd[26533]: Loading rules from directory /etc/polkit-1/rules.d
+2025-05-23T20:09:58.076938+00:00 server polkitd[26533]: Loading rules from directory /usr/share/polkit-1/rules.d
+2025-05-23T20:09:58.078242+00:00 server polkitd[26533]: Finished loading, compiling and executing 6 rules
+2025-05-23T20:09:58.081025+00:00 server polkitd[26533]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2025-05-23T20:09:59.540046+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:10:31.794033+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/apt install openssh-server
+2025-05-23T20:10:31.796192+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:10:36.214218+00:00 server useradd[26833]: new user: name=sshd, UID=107, GID=65534, home=/run/sshd, shell=/usr/sbin/nologin, from=none
+2025-05-23T20:10:40.594381+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:11:25.066110+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/apt install apache2 ufw fail2ban lynis net-tools
+2025-05-23T20:11:25.067270+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:11:31.457269+00:00 server groupadd[27343]: group added to /etc/group: name=ssl-cert, GID=109
+2025-05-23T20:11:31.459371+00:00 server groupadd[27343]: group added to /etc/gshadow: name=ssl-cert
+2025-05-23T20:11:31.460113+00:00 server groupadd[27343]: new group: name=ssl-cert, GID=109
+2025-05-23T20:11:39.861858+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:13:05.993041+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw allow openssh
+2025-05-23T20:13:05.995493+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:13:06.156851+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:13:24.359463+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw allow 80/tcp
+2025-05-23T20:13:24.361719+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:13:24.465986+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:13:36.626044+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw enable
+2025-05-23T20:13:36.628079+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:13:37.064955+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:14:31.294683+00:00 server sshd[28478]: Server listening on :: port 22.
+2025-05-23T20:14:45.336691+00:00 server sshd[28479]: Invalid user nathansatge from 10.0.0.250 port 55076
+2025-05-23T20:15:00.068003+00:00 server sshd[28479]: pam_unix(sshd:auth): check pass; user unknown
+2025-05-23T20:15:00.068839+00:00 server sshd[28479]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.250 
+2025-05-23T20:15:01.218768+00:00 server CRON[28481]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-23T20:15:01.223134+00:00 server CRON[28481]: pam_unix(cron:session): session closed for user root
+2025-05-23T20:15:02.339974+00:00 server sshd[28479]: Failed password for invalid user nathansatge from 10.0.0.250 port 55076 ssh2
+2025-05-23T20:15:07.776300+00:00 server sshd[28479]: Connection closed by invalid user nathansatge 10.0.0.250 port 55076 [preauth]
+2025-05-23T20:15:22.539691+00:00 server sshd[28484]: Accepted password for nsatge from 10.0.0.250 port 55079 ssh2
+2025-05-23T20:15:22.542208+00:00 server sshd[28484]: pam_unix(sshd:session): session opened for user nsatge(uid=1000) by nsatge(uid=0)
+2025-05-23T20:15:22.570524+00:00 server systemd-logind[819]: New session 4 of user nsatge.
+2025-05-23T20:15:57.698142+00:00 server sshd[28540]: Received disconnect from 10.0.0.250 port 55079:11: disconnected by user
+2025-05-23T20:15:57.706884+00:00 server sshd[28540]: Disconnected from user nsatge 10.0.0.250 port 55079
+2025-05-23T20:15:57.707621+00:00 server sshd[28484]: pam_unix(sshd:session): session closed for user nsatge
+2025-05-23T20:15:57.722912+00:00 server systemd-logind[819]: Session 4 logged out. Waiting for processes to exit.
+2025-05-23T20:15:57.724849+00:00 server systemd-logind[819]: Removed session 4.
+2025-05-23T20:16:51.405105+00:00 server sshd[28557]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.250  user=admin
+2025-05-23T20:16:53.580509+00:00 server sshd[28557]: Failed password for admin from 10.0.0.250 port 55110 ssh2
+2025-05-23T20:16:57.415101+00:00 server sshd[28557]: Accepted password for admin from 10.0.0.250 port 55110 ssh2
+2025-05-23T20:16:57.419003+00:00 server sshd[28557]: pam_unix(sshd:session): session opened for user admin(uid=1001) by admin(uid=0)
+2025-05-23T20:16:57.437454+00:00 server systemd-logind[819]: New session 5 of user admin.
+2025-05-23T20:16:57.534655+00:00 server (systemd): pam_unix(systemd-user:session): session opened for user admin(uid=1001) by admin(uid=0)
+2025-05-23T20:17:01.247019+00:00 server CRON[28639]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-23T20:17:01.251499+00:00 server CRON[28639]: pam_unix(cron:session): session closed for user root
+2025-05-23T20:17:04.679816+00:00 server sshd[28627]: Received disconnect from 10.0.0.250 port 55110:11: disconnected by user
+2025-05-23T20:17:04.681509+00:00 server sshd[28627]: Disconnected from user admin 10.0.0.250 port 55110
+2025-05-23T20:17:04.681988+00:00 server sshd[28557]: pam_unix(sshd:session): session closed for user admin
+2025-05-23T20:17:04.690395+00:00 server systemd-logind[819]: Session 5 logged out. Waiting for processes to exit.
+2025-05-23T20:17:04.691736+00:00 server systemd-logind[819]: Removed session 5.
+2025-05-23T20:17:12.332485+00:00 server sshd[28643]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.250  user=root
+2025-05-23T20:17:14.721509+00:00 server sshd[28643]: Failed password for root from 10.0.0.250 port 55116 ssh2
+2025-05-23T20:17:20.920303+00:00 server sshd[28643]: Failed password for root from 10.0.0.250 port 55116 ssh2
+2025-05-23T20:23:02.284398+00:00 server sshd[28679]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.162  user=admin
+2025-05-23T20:23:03.391028+00:00 server sshd[28679]: Failed password for admin from 10.0.0.162 port 54274 ssh2
+2025-05-23T20:23:11.320445+00:00 server sshd[28679]: Failed password for admin from 10.0.0.162 port 54274 ssh2
+2025-05-23T20:23:41.518833+00:00 server sshd[28679]: Accepted password for admin from 10.0.0.162 port 54274 ssh2
+2025-05-23T20:23:41.522527+00:00 server sshd[28679]: pam_unix(sshd:session): session opened for user admin(uid=1001) by admin(uid=0)
+2025-05-23T20:23:41.541654+00:00 server systemd-logind[819]: New session 8 of user admin.
+2025-05-23T20:23:41.606396+00:00 server (systemd): pam_unix(systemd-user:session): session opened for user admin(uid=1001) by admin(uid=0)
+2025-05-23T20:23:55.701322+00:00 server sshd[28751]: Received disconnect from 10.0.0.162 port 54274:11: disconnected by user
+2025-05-23T20:23:55.702110+00:00 server sshd[28751]: Disconnected from user admin 10.0.0.162 port 54274
+2025-05-23T20:23:55.702516+00:00 server sshd[28679]: pam_unix(sshd:session): session closed for user admin
+2025-05-23T20:23:55.715249+00:00 server systemd-logind[819]: Session 8 logged out. Waiting for processes to exit.
+2025-05-23T20:23:55.717625+00:00 server systemd-logind[819]: Removed session 8.
+2025-05-23T20:25:01.321297+00:00 server CRON[28774]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-23T20:25:01.333765+00:00 server CRON[28774]: pam_unix(cron:session): session closed for user root
+2025-05-23T20:25:13.650561+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl enable fail2ban
+2025-05-23T20:25:13.657522+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:25:14.313007+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:25:22.556246+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl start fail2ban
+2025-05-23T20:25:22.565736+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:25:22.586161+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:26:13.941646+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+2025-05-23T20:26:13.947499+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:26:13.949867+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:26:40.309266+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/fail2ban/jail.local
+2025-05-23T20:26:40.311010+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:27:59.428067+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:28:13.036407+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart fail2ban
+2025-05-23T20:28:13.037613+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:28:13.576160+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:28:41.237884+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/fail2ban-client status sshd
+2025-05-23T20:28:41.239685+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:28:41.333321+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:29:20.575746+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/fail2ban-client status sshd
+2025-05-23T20:29:20.577865+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:29:20.660205+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:30:30.141151+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart fail2ban
+2025-05-23T20:30:30.142566+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:30:30.173695+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:30:40.484670+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status fail2ban
+2025-05-23T20:30:40.486708+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:31:56.445696+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:32:06.234892+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/fail2ban/jail.conf
+2025-05-23T20:32:06.237318+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:32:50.454466+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:32:53.671002+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart fail2ban
+2025-05-23T20:32:53.671243+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:32:53.713442+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:32:55.846860+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status fail2ban
+2025-05-23T20:32:55.847730+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:34:51.692903+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:35:01.383804+00:00 server CRON[29016]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-23T20:35:01.386348+00:00 server CRON[29016]: pam_unix(cron:session): session closed for user root
+2025-05-23T20:35:21.796078+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status fail2ban
+2025-05-23T20:35:21.799066+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:35:25.066137+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:35:34.134197+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/fail2ban-client status sshd
+2025-05-23T20:35:34.139515+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:35:34.275484+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:35:42.465030+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart fail2ban
+2025-05-23T20:35:42.466168+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:35:42.486629+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:36:07.847289+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/cat /var/log/fail2ban.log
+2025-05-23T20:36:07.849729+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:36:07.866856+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:40:59.326240+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/apt install fail2ban
+2025-05-23T20:40:59.335215+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:41:01.141367+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:42:15.739963+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl enable fail2ban
+2025-05-23T20:42:15.744253+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:42:16.341499+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:44:05.841020+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status fail2ban
+2025-05-23T20:44:05.843923+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:44:16.586131+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:44:22.461223+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl start fail2ban
+2025-05-23T20:44:22.463435+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:44:22.492113+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:44:24.734214+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status fail2ban
+2025-05-23T20:44:24.736448+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:45:01.429528+00:00 server CRON[29278]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-23T20:45:01.433152+00:00 server CRON[29278]: pam_unix(cron:session): session closed for user root
+2025-05-23T20:47:02.022903+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:47:12.522768+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/fail2ban-client -t
+2025-05-23T20:47:12.524443+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:47:12.626985+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:48:26.172224+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/journalctl -u fail2ban --no-pager -n 50
+2025-05-23T20:48:26.175222+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:48:26.202316+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:49:48.953512+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/fail2ban/jail.local
+2025-05-23T20:49:48.956125+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:52:37.044326+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:52:39.108200+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/fail2ban/jail.local
+2025-05-23T20:52:39.110513+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:53:30.956669+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:53:35.079639+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/fail2ban/jail.conf
+2025-05-23T20:53:35.080318+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:54:08.439931+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:54:14.553572+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl start fail2ban
+2025-05-23T20:54:14.555859+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:54:14.589310+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:54:19.004945+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart fail2ban
+2025-05-23T20:54:19.006138+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:54:19.030358+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:54:22.875367+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status fail2ban
+2025-05-23T20:54:22.876167+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:54:34.139842+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:54:37.227594+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/journalctl -u fail2ban --no-pager -n 50
+2025-05-23T20:54:37.228214+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:54:37.271208+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:55:01.474237+00:00 server CRON[29329]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-23T20:55:01.476414+00:00 server CRON[29329]: pam_unix(cron:session): session closed for user root
+2025-05-23T20:56:23.874314+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/fail2ban/jail.local
+2025-05-23T20:56:23.877923+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:58:04.785443+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:58:11.570483+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/fail2ban-client -t
+2025-05-23T20:58:11.573227+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:58:11.704231+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:58:41.932418+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/fail2ban/jail.local
+2025-05-23T20:58:41.934191+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:59:29.295860+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:59:30.975516+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/fail2ban-client -t
+2025-05-23T20:59:30.976398+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T20:59:31.095099+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T20:59:43.827764+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/fail2ban/jail.local
+2025-05-23T20:59:43.828271+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:00:03.762156+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:00:06.906947+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/fail2ban-client -t
+2025-05-23T21:00:06.907598+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:00:07.035003+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:01:04.565735+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart fail2ban
+2025-05-23T21:01:04.567982+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:01:04.588531+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:01:08.000993+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status fail2ban
+2025-05-23T21:01:08.002308+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:01:14.142344+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:03:14.100631+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status fail2ban
+2025-05-23T21:03:14.104505+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:03:15.915217+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:03:25.055673+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/apt uninstall fail2ban
+2025-05-23T21:03:25.056471+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:03:25.075353+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:04:07.551287+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/apt --reinstall install fail2ban
+2025-05-23T21:04:07.553501+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:04:14.220756+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:05:01.519598+00:00 server CRON[29713]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-23T21:05:01.521952+00:00 server CRON[29713]: pam_unix(cron:session): session closed for user root
+2025-05-23T21:06:19.244599+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/fail2ban-regex /var/log/fail2ban.log /etc/fail2ban/filter.d/selinux-ssh.conf
+2025-05-23T21:06:19.247854+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:06:19.390928+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:07:36.772449+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/tail -f /var/log/fail2ban.log
+2025-05-23T21:07:36.774423+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:07:48.796450+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:08:01.530739+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart fail2ban
+2025-05-23T21:08:01.532692+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:08:01.550580+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:08:07.427844+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status fail2ban
+2025-05-23T21:08:07.429941+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:13:49.822448+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:15:01.588383+00:00 server CRON[29777]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-23T21:15:01.594348+00:00 server CRON[29777]: pam_unix(cron:session): session closed for user root
+2025-05-23T21:15:14.178003+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/fail2ban/jail.local
+2025-05-23T21:15:14.184718+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:15:55.472267+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:16:07.416001+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/fail2ban-client -t
+2025-05-23T21:16:07.416679+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:16:07.578882+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:16:13.614173+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/fail2ban/jail.local
+2025-05-23T21:16:13.615417+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:16:58.057973+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:17:00.144751+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/fail2ban-client -t
+2025-05-23T21:17:00.146190+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:17:00.272556+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:17:01.606320+00:00 server CRON[29793]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-23T21:17:01.611458+00:00 server CRON[29793]: pam_unix(cron:session): session closed for user root
+2025-05-23T21:17:17.188655+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart fail2ban
+2025-05-23T21:17:17.189735+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:17:17.222891+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:17:20.304812+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status fail2ban
+2025-05-23T21:17:20.307365+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:19:10.052521+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:19:27.847203+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl stop fail2ban
+2025-05-23T21:19:27.850088+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:19:27.902081+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:19:43.843744+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/apt-get purge fail2ban
+2025-05-23T21:19:43.846856+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:19:50.367403+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:20:03.463655+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/rm -rf /etc/fail2ban
+2025-05-23T21:20:03.472010+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:20:03.478268+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:20:15.082214+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/apt-get autoremove
+2025-05-23T21:20:15.083592+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:20:21.880997+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:20:33.199062+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/apt-get update
+2025-05-23T21:20:33.201897+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:20:36.826580+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:20:59.327006+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/apt-get install fail2ban
+2025-05-23T21:20:59.329032+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:21:09.205927+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:22:25.218129+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+2025-05-23T21:22:25.219954+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:22:25.225298+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:22:45.663564+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/fail2ban/jail.local
+2025-05-23T21:22:45.666258+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:24:19.385565+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:24:38.828669+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/fail2ban-client -t
+2025-05-23T21:24:38.832100+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:24:38.998883+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:25:01.654833+00:00 server CRON[30798]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-23T21:25:01.663186+00:00 server CRON[30798]: pam_unix(cron:session): session closed for user root
+2025-05-23T21:25:06.467036+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart fail2ban
+2025-05-23T21:25:06.475947+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:25:07.146077+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:25:21.457856+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status fail2ban
+2025-05-23T21:25:21.459166+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:25:43.276380+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:26:00.844179+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/fail2ban-client status sshd
+2025-05-23T21:26:00.849242+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:26:01.056976+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:26:34.879685+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/ssh/sshd_config
+2025-05-23T21:26:34.883376+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:29:07.361143+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:29:33.651250+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/ssh/sshd_config
+2025-05-23T21:29:33.654210+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:29:42.542098+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:29:58.374054+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart ssh
+2025-05-23T21:29:58.376439+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:29:58.418750+00:00 server sshd[28478]: Received signal 15; terminating.
+2025-05-23T21:29:58.646120+00:00 server sshd[30852]: Server listening on :: port 22.
+2025-05-23T21:29:58.648381+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:30:14.839347+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/lynis audit system
+2025-05-23T21:30:14.845375+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:30:48.642385+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:33:06.805421+00:00 server sshd[71426]: Connection closed by 10.0.0.162 port 58586
+2025-05-23T21:33:47.525986+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
+2025-05-23T21:33:47.529572+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:33:47.593848+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:34:01.989634+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/ssh/sshd_config
+2025-05-23T21:34:01.992362+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:34:15.000043+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:34:17.302263+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
+2025-05-23T21:34:17.303267+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:34:17.327108+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:35:01.743909+00:00 server CRON[71438]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-23T21:35:01.752978+00:00 server CRON[71438]: pam_unix(cron:session): session closed for user root
+2025-05-23T21:39:15.929492+00:00 server sshd[71444]: Received disconnect from 10.0.0.162 port 57482:11: Bye Bye [preauth]
+2025-05-23T21:39:15.934031+00:00 server sshd[71444]: Disconnected from authenticating user admin 10.0.0.162 port 57482 [preauth]
+2025-05-23T21:39:16.314979+00:00 server sshd[30852]: error: beginning MaxStartups throttling
+2025-05-23T21:39:16.326092+00:00 server sshd[30852]: drop connection #10 from [10.0.0.162]:57570 on [10.0.0.201]:22 past MaxStartups
+2025-05-23T21:39:17.007465+00:00 server sshd[71453]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.162  user=admin
+2025-05-23T21:39:17.037140+00:00 server sshd[71449]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.162  user=admin
+2025-05-23T21:39:17.039008+00:00 server sshd[71448]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.162  user=admin
+2025-05-23T21:39:17.039856+00:00 server sshd[71452]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.162  user=admin
+2025-05-23T21:39:17.044903+00:00 server sshd[71450]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.162  user=admin
+2025-05-23T21:39:17.045877+00:00 server sshd[71456]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.162  user=admin
+2025-05-23T21:39:17.048240+00:00 server sshd[71463]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.162  user=admin
+2025-05-23T21:39:17.048819+00:00 server sshd[71455]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.162  user=admin
+2025-05-23T21:39:17.059752+00:00 server sshd[71461]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.162  user=admin
+2025-05-23T21:39:17.066011+00:00 server sshd[71447]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.162  user=admin
+2025-05-23T21:39:17.070307+00:00 server sshd[71460]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.162  user=admin
+2025-05-23T21:39:17.072147+00:00 server sshd[71458]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.162  user=admin
+2025-05-23T21:39:17.392308+00:00 server sshd[71446]: Accepted password for admin from 10.0.0.162 port 57490 ssh2
+2025-05-23T21:39:17.397517+00:00 server sshd[71446]: pam_unix(sshd:session): session opened for user admin(uid=1001) by admin(uid=0)
+2025-05-23T21:39:17.541412+00:00 server systemd-logind[819]: New session 19 of user admin.
+2025-05-23T21:39:17.634045+00:00 server (systemd): pam_unix(systemd-user:session): session opened for user admin(uid=1001) by admin(uid=0)
+2025-05-23T21:39:18.444766+00:00 server sshd[71446]: pam_unix(sshd:session): session closed for user admin
+2025-05-23T21:39:18.453668+00:00 server systemd-logind[819]: Session 19 logged out. Waiting for processes to exit.
+2025-05-23T21:39:18.455309+00:00 server systemd-logind[819]: Removed session 19.
+2025-05-23T21:39:18.678426+00:00 server sshd[71453]: Failed password for admin from 10.0.0.162 port 57538 ssh2
+2025-05-23T21:39:18.678946+00:00 server sshd[71449]: Failed password for admin from 10.0.0.162 port 57500 ssh2
+2025-05-23T21:39:18.707749+00:00 server sshd[71448]: Failed password for admin from 10.0.0.162 port 57510 ssh2
+2025-05-23T21:39:18.710644+00:00 server sshd[71452]: Failed password for admin from 10.0.0.162 port 57526 ssh2
+2025-05-23T21:39:18.711314+00:00 server sshd[71450]: Failed password for admin from 10.0.0.162 port 57508 ssh2
+2025-05-23T21:39:18.747932+00:00 server sshd[71463]: Failed password for admin from 10.0.0.162 port 57616 ssh2
+2025-05-23T21:39:18.748617+00:00 server sshd[71456]: Failed password for admin from 10.0.0.162 port 57542 ssh2
+2025-05-23T21:39:18.751830+00:00 server sshd[71455]: Failed password for admin from 10.0.0.162 port 57532 ssh2
+2025-05-23T21:39:18.762187+00:00 server sshd[71461]: Failed password for admin from 10.0.0.162 port 57602 ssh2
+2025-05-23T21:39:18.768175+00:00 server sshd[71447]: Failed password for admin from 10.0.0.162 port 57502 ssh2
+2025-05-23T21:39:18.773187+00:00 server sshd[71460]: Failed password for admin from 10.0.0.162 port 57560 ssh2
+2025-05-23T21:39:18.775258+00:00 server sshd[71458]: Failed password for admin from 10.0.0.162 port 57552 ssh2
+2025-05-23T21:40:16.669347+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/fail2ban-client status sshd
+2025-05-23T21:40:16.687857+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:40:16.944298+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T21:43:03.744938+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/tail -f /var/log/auth.log
+2025-05-23T21:43:03.755909+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T21:45:01.822153+00:00 server CRON[71620]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-23T21:45:01.841409+00:00 server CRON[71620]: pam_unix(cron:session): session closed for user root
+2025-05-23T22:05:01.489594+00:00 server CRON[71634]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-23T22:05:01.494657+00:00 server CRON[71634]: pam_unix(cron:session): session closed for user root
+2025-05-23T22:25:01.972009+00:00 server CRON[71640]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-23T22:25:01.981231+00:00 server CRON[71640]: pam_unix(cron:session): session closed for user root
+2025-05-23T23:34:10.507333+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T23:34:24.323371+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/lynis audit system
+2025-05-23T23:34:24.325644+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T23:34:45.382505+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T23:35:01.037004+00:00 server CRON[112245]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-23T23:35:01.042751+00:00 server CRON[112245]: pam_unix(cron:session): session closed for user root
+2025-05-23T23:35:10.554687+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/cat /var/log/lynis.log
+2025-05-23T23:35:10.561496+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-23T23:57:00.097283+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-23T23:59:01.599605+00:00 server CRON[112258]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-23T23:59:01.604015+00:00 server CRON[112258]: pam_unix(cron:session): session closed for user root
+2025-05-24T15:57:41.488160+00:00 server systemd-logind[700]: New seat seat0.
+2025-05-24T15:57:41.488162+00:00 server systemd-logind[700]: Watching system buttons on /dev/input/event0 (Power Button)
+2025-05-24T15:57:41.488164+00:00 server systemd-logind[700]: Watching system buttons on /dev/input/event3 (QEMU QEMU USB Keyboard)
+2025-05-24T15:57:41.488291+00:00 server polkitd[693]: Loading rules from directory /etc/polkit-1/rules.d
+2025-05-24T15:57:41.488292+00:00 server polkitd[693]: Loading rules from directory /usr/share/polkit-1/rules.d
+2025-05-24T15:57:41.488298+00:00 server polkitd[693]: Finished loading, compiling and executing 6 rules
+2025-05-24T15:57:41.488300+00:00 server polkitd[693]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2025-05-24T16:00:24.823880+00:00 server login[866]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
+2025-05-24T16:00:24.824542+00:00 server login[866]: PAM adding faulty module: pam_lastlog.so
+2025-05-24T16:00:29.977103+00:00 server login[866]: pam_unix(login:session): session opened for user nsatge(uid=1000) by nsatge(uid=0)
+2025-05-24T16:00:30.003829+00:00 server systemd-logind[700]: New session 1 of user nsatge.
+2025-05-24T16:00:30.022881+00:00 server (systemd): pam_unix(systemd-user:session): session opened for user nsatge(uid=1000) by nsatge(uid=0)
+2025-05-24T16:01:25.148545+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/grep Suggestion /var/log/lynis-report.dat
+2025-05-24T16:01:25.150056+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:01:25.156717+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:01:32.364383+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/grep Suggestion /var/log/lynis-report.dat
+2025-05-24T16:01:32.365998+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:01:32.369428+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:01:49.240769+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/grep Warning /var/log/lynis-report.dat
+2025-05-24T16:01:49.242065+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:01:49.244635+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:02:00.323197+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/cat /var/log/lynis-report.dat
+2025-05-24T16:02:00.324005+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:02:00.553495+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:02:19.510916+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/cat /var/log/lynis-report.dat
+2025-05-24T16:02:19.512858+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:02:19.745405+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:03:30.366332+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/grep hardening_index /var/log/lynis-report.dat
+2025-05-24T16:03:30.371605+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:03:30.374622+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:04:17.809413+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/grep Warning /var/log/lynis-report.dat
+2025-05-24T16:04:17.810481+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:04:17.812540+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:04:36.961823+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /var/log/lynis-report.dat
+2025-05-24T16:04:36.963338+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:05:01.782338+00:00 server CRON[1150]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-24T16:05:01.786328+00:00 server CRON[1150]: pam_unix(cron:session): session closed for user root
+2025-05-24T16:07:55.949497+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:15:01.819582+00:00 server CRON[1166]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-24T16:15:01.822651+00:00 server CRON[1166]: pam_unix(cron:session): session closed for user root
+2025-05-24T16:17:18.888105+00:00 server CRON[1170]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-24T16:17:18.893797+00:00 server CRON[1170]: pam_unix(cron:session): session closed for user root
+2025-05-24T16:18:41.759999+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/grep Warning /var/log/lynis-report.dat
+2025-05-24T16:18:41.769942+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:18:41.770005+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:21:56.057065+00:00 server systemd-logind[695]: New seat seat0.
+2025-05-24T16:21:56.057067+00:00 server systemd-logind[695]: Watching system buttons on /dev/input/event0 (Power Button)
+2025-05-24T16:21:56.057069+00:00 server systemd-logind[695]: Watching system buttons on /dev/input/event3 (QEMU QEMU USB Keyboard)
+2025-05-24T16:21:56.059940+00:00 server polkitd[684]: Loading rules from directory /etc/polkit-1/rules.d
+2025-05-24T16:21:56.059942+00:00 server polkitd[684]: Loading rules from directory /usr/share/polkit-1/rules.d
+2025-05-24T16:21:56.061242+00:00 server polkitd[684]: Finished loading, compiling and executing 6 rules
+2025-05-24T16:21:56.061245+00:00 server polkitd[684]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2025-05-24T16:22:02.238779+00:00 server login[853]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
+2025-05-24T16:22:02.238985+00:00 server login[853]: PAM adding faulty module: pam_lastlog.so
+2025-05-24T16:22:05.370961+00:00 server login[853]: pam_unix(login:session): session opened for user nsatge(uid=1000) by nsatge(uid=0)
+2025-05-24T16:22:05.399967+00:00 server systemd-logind[695]: New session 1 of user nsatge.
+2025-05-24T16:22:05.411044+00:00 server (systemd): pam_unix(systemd-user:session): session opened for user nsatge(uid=1000) by nsatge(uid=0)
+2025-05-24T16:25:01.282554+00:00 server CRON[1100]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-24T16:25:01.285969+00:00 server CRON[1100]: pam_unix(cron:session): session closed for user root
+2025-05-24T16:26:53.198580+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/fail2ban-client status
+2025-05-24T16:26:53.200676+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:26:53.260611+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:27:37.873164+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/fail2ban-client status sshd
+2025-05-24T16:27:37.874564+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:27:37.924877+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:28:13.324560+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status fail2ban
+2025-05-24T16:28:13.337613+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:28:19.367683+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:28:26.348713+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status openssh
+2025-05-24T16:28:26.349086+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:28:26.363864+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:28:30.336336+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status openssh-server
+2025-05-24T16:28:30.337264+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:28:30.345174+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:29:38.261206+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart fail2ban
+2025-05-24T16:29:38.261796+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:29:38.707594+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:30:10.369960+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw enable
+2025-05-24T16:30:10.370905+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:30:10.573539+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:31:19.998633+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
+2025-05-24T16:31:19.999134+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:31:20.019382+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:31:37.627348+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart ssh
+2025-05-24T16:31:37.628182+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:31:37.670510+00:00 server sshd[1252]: Server listening on :: port 2222.
+2025-05-24T16:31:37.671487+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:31:39.529535+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
+2025-05-24T16:31:39.530510+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:31:39.547505+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:33:22.993509+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/ssh/ssh_config
+2025-05-24T16:33:22.998832+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:33:36.314768+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:33:42.339256+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/ssh/sshd_config
+2025-05-24T16:33:42.339896+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:33:50.347926+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:33:54.252124+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart ssh
+2025-05-24T16:33:54.253270+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:33:54.265651+00:00 server sshd[1252]: Received signal 15; terminating.
+2025-05-24T16:33:54.299089+00:00 server sshd[1284]: Server listening on :: port 2222.
+2025-05-24T16:33:54.299970+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:33:58.258898+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
+2025-05-24T16:33:58.260162+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:33:58.281525+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:34:46.251022+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl enable ssh
+2025-05-24T16:34:46.252521+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:34:46.681546+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:34:50.275867+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
+2025-05-24T16:34:50.277018+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:34:50.303675+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:35:01.320378+00:00 server CRON[1438]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-24T16:35:01.323976+00:00 server CRON[1438]: pam_unix(cron:session): session closed for user root
+2025-05-24T16:35:17.898259+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw status
+2025-05-24T16:35:17.899897+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:35:17.960568+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:36:24.478546+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw allow openssh
+2025-05-24T16:36:24.480610+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:36:24.565201+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:36:31.404904+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw allow enable
+2025-05-24T16:36:31.407322+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:36:31.449149+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:36:41.931217+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw enable
+2025-05-24T16:36:41.932503+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:36:42.151630+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:36:46.981638+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw status
+2025-05-24T16:36:46.982142+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:36:47.044225+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:37:02.198239+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw allow 22/tcp
+2025-05-24T16:37:02.199208+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:37:02.304346+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:37:06.573128+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw status
+2025-05-24T16:37:06.573940+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:37:06.619023+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:38:51.817490+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart ssh
+2025-05-24T16:38:51.820864+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:38:51.831370+00:00 server sshd[1284]: Received signal 15; terminating.
+2025-05-24T16:38:51.862774+00:00 server sshd[1626]: Server listening on 0.0.0.0 port 22.
+2025-05-24T16:38:51.863004+00:00 server sshd[1626]: Server listening on :: port 22.
+2025-05-24T16:38:51.864294+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:38:59.515112+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
+2025-05-24T16:38:59.515919+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:38:59.537549+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:39:10.468222+00:00 server sshd[1632]: Accepted password for nsatge from 10.0.0.250 port 61334 ssh2
+2025-05-24T16:39:10.471211+00:00 server sshd[1632]: pam_unix(sshd:session): session opened for user nsatge(uid=1000) by nsatge(uid=0)
+2025-05-24T16:39:10.479792+00:00 server systemd-logind[695]: New session 5 of user nsatge.
+2025-05-24T16:40:24.893156+00:00 server sudo:   nsatge : TTY=pts/0 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/lynis audit system
+2025-05-24T16:40:24.894213+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:40:44.206601+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:44:14.881314+00:00 server sshd[1730]: Received disconnect from 10.0.0.250 port 61334:11: disconnected by user
+2025-05-24T16:44:14.886976+00:00 server sshd[1730]: Disconnected from user nsatge 10.0.0.250 port 61334
+2025-05-24T16:44:14.890463+00:00 server sshd[1632]: pam_unix(sshd:session): session closed for user nsatge
+2025-05-24T16:44:14.911497+00:00 server systemd-logind[695]: Session 5 logged out. Waiting for processes to exit.
+2025-05-24T16:44:14.912601+00:00 server systemd-logind[695]: Removed session 5.
+2025-05-24T16:44:34.235082+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/ssh/sshd_config
+2025-05-24T16:44:34.237393+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:44:53.238598+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:44:57.416290+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/ssh/sshd_config
+2025-05-24T16:44:57.418588+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:45:01.366478+00:00 server CRON[42290]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-24T16:45:01.370582+00:00 server CRON[42290]: pam_unix(cron:session): session closed for user root
+2025-05-24T16:46:27.030931+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:46:31.150611+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart ssh
+2025-05-24T16:46:31.151978+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:46:31.170550+00:00 server sshd[1626]: Received signal 15; terminating.
+2025-05-24T16:46:31.194143+00:00 server sshd[42302]: Server listening on 0.0.0.0 port 2222.
+2025-05-24T16:46:31.194925+00:00 server sshd[42302]: Server listening on :: port 2222.
+2025-05-24T16:46:31.195371+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:46:33.569983+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
+2025-05-24T16:46:33.572655+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:46:33.595447+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:46:41.379168+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw status
+2025-05-24T16:46:41.380039+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:46:41.444607+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:46:53.563212+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw not allow 22/tcp
+2025-05-24T16:46:53.564655+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:46:53.609834+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:47:09.523613+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw disable 22/tcp
+2025-05-24T16:47:09.526355+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:47:09.584226+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:47:33.452111+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw deny 22/tcp
+2025-05-24T16:47:33.453248+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:47:33.592464+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:47:36.226833+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw not allow 22/tcp
+2025-05-24T16:47:36.227577+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:47:36.281952+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:47:38.892115+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw status
+2025-05-24T16:47:38.892914+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:47:38.947755+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:48:03.732671+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw delete 22/tcp
+2025-05-24T16:48:03.734705+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:48:03.794778+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:48:26.444140+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw deny 22/tcp
+2025-05-24T16:48:26.446753+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:48:26.522300+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:49:24.182834+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw delete
+2025-05-24T16:49:24.188633+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:49:24.238831+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:49:38.810955+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw delete 22
+2025-05-24T16:49:38.812911+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:49:38.858452+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:49:42.569707+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw delete 22/tcp
+2025-05-24T16:49:42.570750+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:49:42.632486+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:49:54.921718+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw status
+2025-05-24T16:49:54.922731+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:49:54.977759+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:50:03.103399+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw delete 3
+2025-05-24T16:50:03.107867+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:50:10.170285+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:50:13.254332+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw status
+2025-05-24T16:50:13.256790+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:50:13.306801+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:50:16.198353+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw delete 3
+2025-05-24T16:50:16.199619+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:50:18.486338+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:50:20.761315+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw status
+2025-05-24T16:50:20.763087+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:50:20.817684+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:50:27.237688+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw delete 5
+2025-05-24T16:50:27.239602+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:50:28.961738+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:50:31.622714+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw status
+2025-05-24T16:50:31.623646+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:50:31.678594+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:50:45.475872+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/ufw allow 2222/tcp
+2025-05-24T16:50:45.477155+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:50:45.585601+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:51:16.854534+00:00 server sshd[42559]: Connection closed by authenticating user nsatge 10.0.0.250 port 63169 [preauth]
+2025-05-24T16:52:34.407857+00:00 server sshd[42561]: Connection closed by authenticating user nsatge 10.0.0.250 port 63181 [preauth]
+2025-05-24T16:52:34.549987+00:00 server sshd[42563]: Connection closed by authenticating user nsatge 10.0.0.250 port 63182 [preauth]
+2025-05-24T16:52:34.694378+00:00 server sshd[42565]: Connection closed by authenticating user nsatge 10.0.0.250 port 63183 [preauth]
+2025-05-24T16:53:52.796195+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/ssh/sshd_config
+2025-05-24T16:53:52.799559+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:54:03.441623+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:54:11.435353+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart ssh
+2025-05-24T16:54:11.437129+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:54:11.450678+00:00 server sshd[42302]: Received signal 15; terminating.
+2025-05-24T16:54:11.476761+00:00 server sshd[42579]: Server listening on 0.0.0.0 port 2222.
+2025-05-24T16:54:11.476876+00:00 server sshd[42579]: Server listening on :: port 2222.
+2025-05-24T16:54:11.477892+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:54:15.142905+00:00 server sshd[42582]: Connection closed by authenticating user nsatge 10.0.0.250 port 63189 [preauth]
+2025-05-24T16:54:15.283075+00:00 server sshd[42584]: Connection closed by authenticating user nsatge 10.0.0.250 port 63190 [preauth]
+2025-05-24T16:54:21.766797+00:00 server sshd[42586]: Accepted password for nsatge from 10.0.0.250 port 63191 ssh2
+2025-05-24T16:54:21.770963+00:00 server sshd[42586]: pam_unix(sshd:session): session opened for user nsatge(uid=1000) by nsatge(uid=0)
+2025-05-24T16:54:21.778931+00:00 server systemd-logind[695]: New session 7 of user nsatge.
+2025-05-24T16:54:21.979739+00:00 server sshd[42642]: Received disconnect from 10.0.0.250 port 63191:11: disconnected by user
+2025-05-24T16:54:21.979978+00:00 server sshd[42642]: Disconnected from user nsatge 10.0.0.250 port 63191
+2025-05-24T16:54:21.980019+00:00 server sshd[42586]: pam_unix(sshd:session): session closed for user nsatge
+2025-05-24T16:54:21.981246+00:00 server systemd-logind[695]: Session 7 logged out. Waiting for processes to exit.
+2025-05-24T16:54:21.981723+00:00 server systemd-logind[695]: Removed session 7.
+2025-05-24T16:54:33.273358+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/ssh/sshd_config
+2025-05-24T16:54:33.279734+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:54:40.176091+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:54:43.161018+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart ssh
+2025-05-24T16:54:43.163220+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:54:43.182460+00:00 server sshd[42579]: Received signal 15; terminating.
+2025-05-24T16:54:43.208515+00:00 server sshd[42661]: Server listening on 0.0.0.0 port 2222.
+2025-05-24T16:54:43.208586+00:00 server sshd[42661]: Server listening on :: port 2222.
+2025-05-24T16:54:43.209854+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:54:58.682446+00:00 server sshd[42662]: Accepted publickey for nsatge from 10.0.0.250 port 63196 ssh2: RSA SHA256:RaHpJKQ9H3qILmz4B3diEWvg4yB/bLRJooWL0AQkI4A
+2025-05-24T16:54:58.684245+00:00 server sshd[42662]: pam_unix(sshd:session): session opened for user nsatge(uid=1000) by nsatge(uid=0)
+2025-05-24T16:54:58.691741+00:00 server systemd-logind[695]: New session 8 of user nsatge.
+2025-05-24T16:55:01.419617+00:00 server CRON[42719]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-24T16:55:01.423949+00:00 server CRON[42719]: pam_unix(cron:session): session closed for user root
+2025-05-24T16:55:34.215157+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status apache
+2025-05-24T16:55:34.217887+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:55:34.229869+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:55:35.935394+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status apache2
+2025-05-24T16:55:35.936713+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:55:39.932200+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:56:16.659867+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/nano /etc/fail2ban/jail.local
+2025-05-24T16:56:16.662300+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:56:38.870712+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:56:48.085807+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl restart fail2ban
+2025-05-24T16:56:48.087019+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:56:48.406829+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:56:53.923958+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/systemctl status fail2ban
+2025-05-24T16:56:53.924799+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:57:05.723717+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T16:57:28.701956+00:00 server sudo:   nsatge : TTY=tty1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/fail2ban-client status sshd
+2025-05-24T16:57:28.702864+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T16:57:28.770523+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T20:25:53.711998+00:00 server CRON[42779]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-24T20:25:53.715702+00:00 server CRON[42779]: pam_unix(cron:session): session closed for user root
+2025-05-24T20:25:55.326841+00:00 server sudo:   nsatge : TTY=pts/0 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/sbin/lynis audit system
+2025-05-24T20:25:55.328081+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T20:26:12.233949+00:00 server sudo: pam_unix(sudo:session): session closed for user root
+2025-05-24T20:32:14.014436+00:00 server login[853]: pam_unix(login:session): session closed for user nsatge
+2025-05-24T20:32:14.033252+00:00 server systemd-logind[695]: Session 1 logged out. Waiting for processes to exit.
+2025-05-24T20:32:14.041274+00:00 server systemd-logind[695]: Removed session 1.
+2025-05-24T20:32:19.057068+00:00 server login[83289]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
+2025-05-24T20:32:19.058461+00:00 server login[83289]: PAM adding faulty module: pam_lastlog.so
+2025-05-24T20:32:28.924443+00:00 server login[83289]: pam_unix(login:session): session opened for user nsatge(uid=1000) by nsatge(uid=0)
+2025-05-24T20:32:28.930559+00:00 server systemd-logind[695]: New session 11 of user nsatge.
+2025-05-24T20:32:48.841430+00:00 server sshd[83435]: Accepted publickey for nsatge from 10.0.0.250 port 63827 ssh2: RSA SHA256:RaHpJKQ9H3qILmz4B3diEWvg4yB/bLRJooWL0AQkI4A
+2025-05-24T20:32:48.843635+00:00 server sshd[83435]: pam_unix(sshd:session): session opened for user nsatge(uid=1000) by nsatge(uid=0)
+2025-05-24T20:32:48.856545+00:00 server systemd-logind[695]: New session 12 of user nsatge.
+2025-05-24T21:25:01.090889+00:00 server CRON[83537]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-05-24T21:25:01.103674+00:00 server CRON[83537]: pam_unix(cron:session): session closed for user root
+2025-05-24T21:28:14.444413+00:00 server sudo:   nsatge : TTY=pts/1 ; PWD=/home/nsatge ; USER=root ; COMMAND=/usr/bin/cp /var/log/lynis-report.dat linux-server-security/lynis/
+2025-05-24T21:28:14.453076+00:00 server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by nsatge(uid=1000)
+2025-05-24T21:28:14.454023+00:00 server sudo: pam_unix(sudo:session): session closed for user root

@@ -1,0 +1,126 @@
+2025-05-23 21:21:03,533 fail2ban.server         [30603]: INFO    --------------------------------------------------
+2025-05-23 21:21:03,533 fail2ban.server         [30603]: INFO    Starting Fail2ban v1.0.2
+2025-05-23 21:21:03,533 fail2ban.observer       [30603]: INFO    Observer start...
+2025-05-23 21:21:03,541 fail2ban.database       [30603]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-05-23 21:21:03,545 fail2ban.database       [30603]: WARNING New database created. Version '4'
+2025-05-23 21:21:03,545 fail2ban.jail           [30603]: INFO    Creating new jail 'sshd'
+2025-05-23 21:21:03,669 fail2ban.jail           [30603]: INFO    Jail 'sshd' uses systemd {}
+2025-05-23 21:21:03,671 fail2ban.jail           [30603]: INFO    Initiated 'systemd' backend
+2025-05-23 21:21:03,672 fail2ban.filter         [30603]: INFO      maxLines: 1
+2025-05-23 21:21:03,684 fail2ban.filtersystemd  [30603]: INFO    [sshd] Added journal match for: '_SYSTEMD_UNIT=sshd.service + _COMM=sshd'
+2025-05-23 21:21:03,684 fail2ban.filter         [30603]: INFO      maxRetry: 5
+2025-05-23 21:21:03,684 fail2ban.filter         [30603]: INFO      findtime: 600
+2025-05-23 21:21:03,684 fail2ban.actions        [30603]: INFO      banTime: 600
+2025-05-23 21:21:03,684 fail2ban.filter         [30603]: INFO      encoding: UTF-8
+2025-05-23 21:21:03,686 fail2ban.jail           [30603]: INFO    Jail 'sshd' started
+2025-05-23 21:21:03,691 fail2ban.filtersystemd  [30603]: INFO    [sshd] Jail is in operation now (process new journal entries)
+2025-05-23 21:25:06,576 fail2ban.server         [30603]: INFO    Shutdown in progress...
+2025-05-23 21:25:06,583 fail2ban.observer       [30603]: INFO    Observer stop ... try to end queue 5 seconds
+2025-05-23 21:25:06,609 fail2ban.observer       [30603]: INFO    Observer stopped, 0 events remaining.
+2025-05-23 21:25:06,657 fail2ban.server         [30603]: INFO    Stopping all jails
+2025-05-23 21:25:07,106 fail2ban.actions        [30603]: NOTICE  [sshd] Flush ticket(s) with nftables
+2025-05-23 21:25:07,108 fail2ban.jail           [30603]: INFO    Jail 'sshd' stopped
+2025-05-23 21:25:07,114 fail2ban.database       [30603]: INFO    Connection to database closed.
+2025-05-23 21:25:07,115 fail2ban.server         [30603]: INFO    Exiting Fail2ban
+2025-05-23 21:25:07,209 fail2ban.server         [30811]: INFO    --------------------------------------------------
+2025-05-23 21:25:07,209 fail2ban.server         [30811]: INFO    Starting Fail2ban v1.0.2
+2025-05-23 21:25:07,210 fail2ban.observer       [30811]: INFO    Observer start...
+2025-05-23 21:25:07,218 fail2ban.database       [30811]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-05-23 21:25:07,218 fail2ban.jail           [30811]: INFO    Creating new jail 'sshd'
+2025-05-23 21:25:07,331 fail2ban.jail           [30811]: INFO    Jail 'sshd' uses pyinotify {}
+2025-05-23 21:25:07,332 fail2ban.jail           [30811]: INFO    Initiated 'pyinotify' backend
+2025-05-23 21:25:07,333 fail2ban.filter         [30811]: INFO      maxLines: 1
+2025-05-23 21:25:07,339 fail2ban.filter         [30811]: INFO      maxRetry: 5
+2025-05-23 21:25:07,339 fail2ban.filter         [30811]: INFO      findtime: 600
+2025-05-23 21:25:07,339 fail2ban.actions        [30811]: INFO      banTime: 3600
+2025-05-23 21:25:07,339 fail2ban.filter         [30811]: INFO      encoding: UTF-8
+2025-05-23 21:25:07,340 fail2ban.filter         [30811]: INFO    Added logfile: '/var/log/auth.log' (pos = 0, hash = 4f096cfe2e0c12faeaf5516d43766b4f348506f4)
+2025-05-23 21:25:07,341 fail2ban.jail           [30811]: INFO    Jail 'sshd' started
+2025-05-23 21:39:18,723 fail2ban.filter         [30811]: INFO    [sshd] Found 10.0.0.162 - 2025-05-23 21:39:18
+2025-05-23 21:39:18,732 fail2ban.filter         [30811]: INFO    [sshd] Found 10.0.0.162 - 2025-05-23 21:39:18
+2025-05-23 21:39:18,732 fail2ban.filter         [30811]: INFO    [sshd] Found 10.0.0.162 - 2025-05-23 21:39:18
+2025-05-23 21:39:18,733 fail2ban.filter         [30811]: INFO    [sshd] Found 10.0.0.162 - 2025-05-23 21:39:18
+2025-05-23 21:39:18,733 fail2ban.filter         [30811]: INFO    [sshd] Found 10.0.0.162 - 2025-05-23 21:39:18
+2025-05-23 21:39:18,749 fail2ban.filter         [30811]: INFO    [sshd] Found 10.0.0.162 - 2025-05-23 21:39:18
+2025-05-23 21:39:18,750 fail2ban.filter         [30811]: INFO    [sshd] Found 10.0.0.162 - 2025-05-23 21:39:18
+2025-05-23 21:39:18,752 fail2ban.filter         [30811]: INFO    [sshd] Found 10.0.0.162 - 2025-05-23 21:39:18
+2025-05-23 21:39:18,762 fail2ban.filter         [30811]: INFO    [sshd] Found 10.0.0.162 - 2025-05-23 21:39:18
+2025-05-23 21:39:18,768 fail2ban.filter         [30811]: INFO    [sshd] Found 10.0.0.162 - 2025-05-23 21:39:18
+2025-05-23 21:39:18,773 fail2ban.filter         [30811]: INFO    [sshd] Found 10.0.0.162 - 2025-05-23 21:39:18
+2025-05-23 21:39:18,776 fail2ban.filter         [30811]: INFO    [sshd] Found 10.0.0.162 - 2025-05-23 21:39:18
+2025-05-23 21:39:19,055 fail2ban.actions        [30811]: NOTICE  [sshd] Ban 10.0.0.162
+2025-05-23 23:31:26,885 fail2ban.actions        [30811]: NOTICE  [sshd] Unban 10.0.0.162
+2025-05-24 15:57:41,548 fail2ban.server         [690]: INFO    --------------------------------------------------
+2025-05-24 15:57:41,548 fail2ban.server         [690]: INFO    Starting Fail2ban v1.0.2
+2025-05-24 15:57:41,548 fail2ban.observer       [690]: INFO    Observer start...
+2025-05-24 15:57:41,551 fail2ban.database       [690]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-05-24 15:57:41,551 fail2ban.jail           [690]: INFO    Creating new jail 'sshd'
+2025-05-24 15:57:41,630 fail2ban.jail           [690]: INFO    Jail 'sshd' uses pyinotify {}
+2025-05-24 15:57:41,631 fail2ban.jail           [690]: INFO    Initiated 'pyinotify' backend
+2025-05-24 15:57:41,632 fail2ban.filter         [690]: INFO      maxLines: 1
+2025-05-24 15:57:41,637 fail2ban.filter         [690]: INFO      maxRetry: 5
+2025-05-24 15:57:41,637 fail2ban.filter         [690]: INFO      findtime: 600
+2025-05-24 15:57:41,637 fail2ban.actions        [690]: INFO      banTime: 3600
+2025-05-24 15:57:41,637 fail2ban.filter         [690]: INFO      encoding: UTF-8
+2025-05-24 15:57:41,637 fail2ban.filter         [690]: INFO    Added logfile: '/var/log/auth.log' (pos = 51158, hash = 4f096cfe2e0c12faeaf5516d43766b4f348506f4)
+2025-05-24 15:57:41,638 fail2ban.jail           [690]: INFO    Jail 'sshd' started
+2025-05-24 16:21:56,111 fail2ban.server         [682]: INFO    --------------------------------------------------
+2025-05-24 16:21:56,111 fail2ban.server         [682]: INFO    Starting Fail2ban v1.0.2
+2025-05-24 16:21:56,112 fail2ban.observer       [682]: INFO    Observer start...
+2025-05-24 16:21:56,120 fail2ban.database       [682]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-05-24 16:21:56,120 fail2ban.jail           [682]: INFO    Creating new jail 'sshd'
+2025-05-24 16:21:56,213 fail2ban.jail           [682]: INFO    Jail 'sshd' uses pyinotify {}
+2025-05-24 16:21:56,214 fail2ban.jail           [682]: INFO    Initiated 'pyinotify' backend
+2025-05-24 16:21:56,214 fail2ban.filter         [682]: INFO      maxLines: 1
+2025-05-24 16:21:56,219 fail2ban.filter         [682]: INFO      maxRetry: 5
+2025-05-24 16:21:56,219 fail2ban.filter         [682]: INFO      findtime: 600
+2025-05-24 16:21:56,219 fail2ban.actions        [682]: INFO      banTime: 3600
+2025-05-24 16:21:56,219 fail2ban.filter         [682]: INFO      encoding: UTF-8
+2025-05-24 16:21:56,220 fail2ban.filter         [682]: INFO    Added logfile: '/var/log/auth.log' (pos = 56670, hash = 4f096cfe2e0c12faeaf5516d43766b4f348506f4)
+2025-05-24 16:21:56,221 fail2ban.jail           [682]: INFO    Jail 'sshd' started
+2025-05-24 16:29:38,317 fail2ban.server         [682]: INFO    Shutdown in progress...
+2025-05-24 16:29:38,317 fail2ban.observer       [682]: INFO    Observer stop ... try to end queue 5 seconds
+2025-05-24 16:29:38,341 fail2ban.observer       [682]: INFO    Observer stopped, 0 events remaining.
+2025-05-24 16:29:38,392 fail2ban.server         [682]: INFO    Stopping all jails
+2025-05-24 16:29:38,392 fail2ban.filter         [682]: INFO    Removed logfile: '/var/log/auth.log'
+2025-05-24 16:29:38,668 fail2ban.actions        [682]: NOTICE  [sshd] Flush ticket(s) with iptables-multiport
+2025-05-24 16:29:38,669 fail2ban.jail           [682]: INFO    Jail 'sshd' stopped
+2025-05-24 16:29:38,671 fail2ban.database       [682]: INFO    Connection to database closed.
+2025-05-24 16:29:38,671 fail2ban.server         [682]: INFO    Exiting Fail2ban
+2025-05-24 16:29:38,757 fail2ban.server         [1134]: INFO    --------------------------------------------------
+2025-05-24 16:29:38,757 fail2ban.server         [1134]: INFO    Starting Fail2ban v1.0.2
+2025-05-24 16:29:38,757 fail2ban.observer       [1134]: INFO    Observer start...
+2025-05-24 16:29:38,758 fail2ban.database       [1134]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-05-24 16:29:38,759 fail2ban.jail           [1134]: INFO    Creating new jail 'sshd'
+2025-05-24 16:29:38,791 fail2ban.jail           [1134]: INFO    Jail 'sshd' uses pyinotify {}
+2025-05-24 16:29:38,792 fail2ban.jail           [1134]: INFO    Initiated 'pyinotify' backend
+2025-05-24 16:29:38,792 fail2ban.filter         [1134]: INFO      maxLines: 1
+2025-05-24 16:29:38,797 fail2ban.filter         [1134]: INFO      maxRetry: 5
+2025-05-24 16:29:38,797 fail2ban.filter         [1134]: INFO      findtime: 600
+2025-05-24 16:29:38,797 fail2ban.actions        [1134]: INFO      banTime: 3600
+2025-05-24 16:29:38,797 fail2ban.filter         [1134]: INFO      encoding: UTF-8
+2025-05-24 16:29:38,797 fail2ban.filter         [1134]: INFO    Added logfile: '/var/log/auth.log' (pos = 60418, hash = 4f096cfe2e0c12faeaf5516d43766b4f348506f4)
+2025-05-24 16:29:38,798 fail2ban.jail           [1134]: INFO    Jail 'sshd' started
+2025-05-24 16:56:48,165 fail2ban.server         [1134]: INFO    Shutdown in progress...
+2025-05-24 16:56:48,166 fail2ban.observer       [1134]: INFO    Observer stop ... try to end queue 5 seconds
+2025-05-24 16:56:48,188 fail2ban.observer       [1134]: INFO    Observer stopped, 0 events remaining.
+2025-05-24 16:56:48,234 fail2ban.server         [1134]: INFO    Stopping all jails
+2025-05-24 16:56:48,235 fail2ban.filter         [1134]: INFO    Removed logfile: '/var/log/auth.log'
+2025-05-24 16:56:48,375 fail2ban.actions        [1134]: NOTICE  [sshd] Flush ticket(s) with iptables-multiport
+2025-05-24 16:56:48,376 fail2ban.jail           [1134]: INFO    Jail 'sshd' stopped
+2025-05-24 16:56:48,377 fail2ban.database       [1134]: INFO    Connection to database closed.
+2025-05-24 16:56:48,378 fail2ban.server         [1134]: INFO    Exiting Fail2ban
+2025-05-24 16:56:48,455 fail2ban.server         [42746]: INFO    --------------------------------------------------
+2025-05-24 16:56:48,455 fail2ban.server         [42746]: INFO    Starting Fail2ban v1.0.2
+2025-05-24 16:56:48,455 fail2ban.observer       [42746]: INFO    Observer start...
+2025-05-24 16:56:48,460 fail2ban.database       [42746]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-05-24 16:56:48,460 fail2ban.jail           [42746]: INFO    Creating new jail 'sshd'
+2025-05-24 16:56:48,494 fail2ban.jail           [42746]: INFO    Jail 'sshd' uses pyinotify {}
+2025-05-24 16:56:48,495 fail2ban.jail           [42746]: INFO    Initiated 'pyinotify' backend
+2025-05-24 16:56:48,495 fail2ban.filter         [42746]: INFO      maxLines: 1
+2025-05-24 16:56:48,500 fail2ban.filter         [42746]: INFO      maxRetry: 5
+2025-05-24 16:56:48,500 fail2ban.filter         [42746]: INFO      findtime: 600
+2025-05-24 16:56:48,500 fail2ban.actions        [42746]: INFO      banTime: 3600
+2025-05-24 16:56:48,500 fail2ban.filter         [42746]: INFO      encoding: UTF-8
+2025-05-24 16:56:48,500 fail2ban.filter         [42746]: INFO    Added logfile: '/var/log/auth.log' (pos = 83725, hash = 4f096cfe2e0c12faeaf5516d43766b4f348506f4)
+2025-05-24 16:56:48,501 fail2ban.jail           [42746]: INFO    Jail 'sshd' started
