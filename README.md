@@ -1,137 +1,138 @@
-# 🛡️ Projet Cybersécurité : Sécurisation d’un serveur Linux + Tests d’attaque avec Kali
+# Linux Server Hardening + Attack Tests from Kali
 
-## 🎯 Objectif du projet
+I built a small Ubuntu server, hardened it, and attacked it from a Kali Linux VM to test the defenses.
+Goal: practice hardening, monitoring, and a defensive mindset against common attacks.
 
-Créer un serveur Linux minimal, le configurer de manière sécurisée, puis simuler des attaques réseau avec Kali Linux pour tester sa résistance.
-But pédagogique : apprendre le hardening, les outils de surveillance, et la posture défensive face à des menaces de base.
+**Stack:** Ubuntu Server 24.04 · OpenSSH · UFW · Fail2Ban · Apache · Lynis · Kali Linux (nmap, Hydra, Nikto)
 
-## 📦 Environnement requis
+## Lab setup
 
-### Machines virtuelles
-1. Serveur Linux (Ubuntu 22.04 ou Debian 12)
-Utilisé comme serveur cible
-2. Kali Linux
-Utilisé comme machine d’attaque
+```mermaid
+flowchart LR
+    K[Kali Linux VM<br/>attacker] -- "nmap, Hydra, Nikto" --> S[Ubuntu 24.04 VM<br/>SSH on 2222, Apache on 80]
+    S --- F[UFW firewall<br/>+ Fail2Ban]
+```
 
-
-
-## 🔧 Installation du serveur
-
-### Étapes :
-- Créer une VM Ubuntu/Debian dans UTM
-- Configurer l’IP en mode bridge (ou réseau interne) pour que Kali et le serveur
-- Installer les outils suivants sur le serveur :
+- Two VMs in UTM on the same bridged (or internal) network, so Kali can reach the server.
+- Packages on the server:
 
 ```bash
 sudo apt update && sudo apt upgrade
 sudo apt install apache2 openssh-server ufw fail2ban lynis net-tools
 ```
 
-- Apache → pour avoir un port 80 exposé
-- OpenSSH → pour te connecter à distance (donc une cible à sécuriser)
-- UFW → pare-feu simple
-- Fail2Ban → bloque les tentatives de brute-force
-- Lynis → scanner de sécurité
-- Net-tools → outils réseau (ping, ifconfig…)
+| Tool | Why |
+|---|---|
+| Apache | An exposed web service (port 80) to scan |
+| OpenSSH | Remote access, so a target to secure |
+| UFW | Simple host firewall |
+| Fail2Ban | Bans IPs after failed logins (brute-force protection) |
+| Lynis | Security audit of the system |
 
+## Hardening
 
+### 1. SSH keys (do this first, while password login still works)
 
-## 🔐 Sécurisation de base du serveur
+From Kali:
 
-
-### Pare-feu UFW :
 ```bash
-sudo ufw allow OpenSSH
-sudo ufw allow 80/tcp
-sudo ufw enable
+ssh-keygen -t ed25519
+ssh-copy-id <your_user>@<server_ip>
 ```
 
-### Fail2Ban :
-1.  Active et démarre :
-```bash
-sudo systemctl enable fail2ban
-sudo systemctl start fail2ban
-```
+### 2. SSH config and firewall
 
-2. Crée un fichier de configuration personnalisé :
-```bash
-sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
-```
+`/etc/ssh/sshd_config`:
 
-3. Édite la section [sshd] :
-```bash
-[sshd]
-enabled = true
-port = ssh
-maxretry = 3
-bantime = 3600
-```
-
-4. Redémarre le service :
-```bash
-sudo systemctl restart fail2ban
-```
-
-5. Vérifie l’état :
-```bash
-sudo fail2ban-client status sshd
-```
-
-### SSH sécurisée
-1. Édition de /etc/ssh/sshd_config :
 ```bash
 Port 2222
 PermitRootLogin no
 PasswordAuthentication no
-AllowUsers ton_user
+AllowUsers <your_user>
 ```
-2. Redémarrage SSH :
+
+Open the new port **before** you restart SSH, or you lock yourself out. Then open only what the server needs:
+
 ```bash
-sudo systemctl restart ssh
+sudo ufw default deny incoming
+sudo ufw allow 2222/tcp
+sudo ufw allow 80/tcp
+sudo ufw enable
+
+# Ubuntu 24.04 starts SSH through a systemd socket, so reload it to apply the new port
+sudo systemctl daemon-reload
+sudo systemctl restart ssh.socket
 ```
 
-3. Génération et configuration de clé SSH depuis Kali
+Test from Kali: `ssh -p 2222 <your_user>@<server_ip>`
 
-Sur Kali
+### 3. Fail2Ban
+
 ```bash
-ssh-keygen -t rsa -b 4096
-ssh-copy-id -p 2222 ton_user@adresse_ip_serveur
-ssh -p 2222 ton_user@adresse_ip_serveur
+sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+sudo systemctl enable --now fail2ban
 ```
 
+`[sshd]` section in `/etc/fail2ban/jail.local` (full file in [`fail2ban/jail.local`](fail2ban/jail.local)):
 
-## 🔍 Analyse de sécurité avec Lynis
+```ini
+[sshd]
+enabled  = true
+port     = 2222
+maxretry = 3
+bantime  = 3600
+```
+
+Check it: `sudo fail2ban-client status sshd`
+
+### 4. Audit with Lynis
+
 ```bash
-    sudo lynis audit system
+sudo lynis audit system
 ```
 
+## Attacks from Kali
 
-## 💣 Attaques depuis Kali
-
-1. Depuis Kali, fais un scan de reconnaissance :
 ```bash
-nmap -p- -sV <IP_SERVER>
+# 1. Reconnaissance: all ports and service versions
+nmap -p- -sV <server_ip>
+
+# 2. SSH brute force on port 2222
+hydra -l admin -P /usr/share/wordlists/rockyou.txt.gz ssh://<server_ip> -s 2222
+
+# 3. Web vulnerability scan
+nikto -h http://<server_ip>
 ```
 
-2. Port SSH : essaye un bruteforce avec hydra sur le port 2222 :
-```bash
-hydra -l admin -P /usr/share/wordlists/rockyou.txt.gz ssh://<IP_SERVER> -s 2222
-```
+## Results
 
-3. Lance un scan de vulnérabilités (reconnaissance passive) :
-```bash
-nikto -h http://<IP-serveur>
-```
+All numbers come from the logs and the report in this repository (May 2025).
 
+| Test | Result | Evidence |
+|---|---|---|
+| Lynis audit | Hardening index **65 / 100**, 1 warning (no security repository in APT sources), 47 suggestions | [`lynis/lynis-report.dat`](lynis/lynis-report.dat) |
+| Hydra brute force | 18 failed password attempts, then Fail2Ban **banned the Kali IP** on 23 May 2025 at 21:39 | [`ssh/auth.log`](ssh/auth.log), [`fail2ban/fail2ban.log`](fail2ban/fail2ban.log) |
+| Nikto scan | Scan requests visible in the Apache access log | [`apache/access.log`](apache/access.log) |
 
-## 📁 Analyse des logs sur le serveur
-- Apache : **sudo tail -f /var/log/apache2/access.log**
-- SSH : **sudo tail -f /var/log/auth.log**
-- Fail2Ban : **/var/log/fail2ban.log**
+![Fail2Ban ban](images/fail2ban.png)
+![Hydra brute force](images/hydra.png)
+![Nikto scan](images/nikto.png)
+![Lynis report](lynis/lynis1.png)
 
+## What I learned from reviewing my own config
 
-## 📌 Améliorations futures
-- Implémenter un **reverse proxy avec HTTPS (Let’s Encrypt + Nginx)**
-- Utiliser **Ansible ou Bash script** pour tout automatiser (DevSecOps)
-- Mettre en place une surveillance avec **OSSEC, Wazuh ou ELK**
+A later review found two typos in the first `jail.local`: `enable = true` instead of `enabled`, and
+`mexretry = 3` instead of `maxretry`. Fail2Ban ignores unknown keys without an error. The ban still worked
+only because Ubuntu enables the `sshd` jail by default, and `fail2ban.log` shows `maxRetry: 5`, not 3.
+The config in this repository is now fixed. Lesson: always check the running config
+(`fail2ban-client get sshd maxretry`), not only the file.
 
+The same review found that the first version of this guide opened port 22 in UFW while SSH ran on 2222.
+The firewall steps above are corrected.
+
+## Next steps
+
+- [ ] HTTPS with a reverse proxy (Nginx + Let's Encrypt)
+- [ ] Automate the whole setup with Ansible
+- [ ] Send logs to a SIEM (Wazuh or Elastic) and write detection rules
+- [ ] Fix the Lynis warning and the top suggestions, then compare the new score
